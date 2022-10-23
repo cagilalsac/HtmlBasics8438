@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Basic HTML</title>
+</head>
+<body>
+    <h1>Heading 1</h1>
+    <h3>Heading 3</h3>
+    <p>Paragraph</p>
+    <span>Span</span>
+    <br />
+    <label>Label Tag</label>
+    <div>
+        Div Tag
+        <br />
+        <label>Label Tag in Div Tag</label>
+        <input type="text" value="Input type text tag" />
+    </div>
+    <hr />
+    <div>
+        <div>
+            <select>
+                <option value="1">Select Option 1</option>
+                <option value="2">Select Option 2</option>
+                <option value="3" selected>Select Option 3</option>
+            </select>
+
+        </div>
+        <div>
+            <select multiple>
+                <option value="1">Select Option 1</option>
+                <option value="2" selected>Select Option 2</option>
+                <option value="3" selected>Select Option 3</option>
+            </select>
+        </div>
+    </div>
+    <table>
+        <tr>
+            <th>
+                Table Header 1
+            </th>
+            <th>
+                Table Header 2
+            </th>
+            <th>
+                Table Header 3
+            </th>
+        </tr>
+        <tr>
+            <td>Table Cell 1</td>
+
+            <td>Table Cell 2</td>
+
+            <td>Table Cell 3</td>
+        </tr>
+    </table>
+    <input type="checkbox" checked />&nbsp;&nbsp;&nbsp;CheckBox<!-- Eğer herhangi bir input tag'inin yanına tek boşluk (klavye) eklenirse bu boşluk sayfaya yansır. eğer bir den fazla boşluk konması gerekiyorsa o zaman HTML'deki boşluk karakteri (&nbsp;) kullanılmalıdır -->
+    <br />
+    <div>
+        <input type="radio" value="V1" name="options" checked /> Radio 1
+        <input type="radio" value="V2" name="options" /> Radio 2
+        <input type="radio" value="V3" name="options" /> Radio 3
+    </div>
+    <ul>
+        <!-- unordered list -->
+        <li>item 1</li> <!-- list item -->
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+    <ol>
+        <!-- ordered list -->
+        <li>item 1</li> <!-- list item -->
+        <li>item 2</li>
+        <li>item 3</li>
+    </ol>
+    <b>Bold Text</b>
+    <br />
+    <i>Italic Text</i>
+    <br />
+    <em>Italic Text</em>
+    <br />
+    <b><i><u><s>Çağıl Alsaç</s></u></i></b>
+    <br />
+    <span>Adres: </span>&nbsp;<textarea rows="4" cols="100">My Textarea</textarea>
+    <br />
+    <input type="button" value="Kaydet" />
+    <br />
+    <button>Kaydet</button>
+    <br />
+    <a href="https://sims.ist">SIMS</a>
+    <br />
+    <a href="https://sims.ist" target="_blank">SIMS</a>
+    <br />
+    This is normal text but this is <small>small text</small>.
+    <br />
+    <!-- sanal yol (virtual path) kökü wwwroot'tan başlar uygulama çalıştığında wwwroot altındakilere direkt sunucu adresi üzerinden ulaşılır (https://localhost:1234/index.htm)-->
+    <!-- fiziksel yol (absolute path) herhangi bir harddiksteki klasör veya dosyalara ulaşmamızı sağlar. (C:\Çağıl\Alsaç.txt) -->
+    <img src="./files/sheltie.png" title="Shetland Sheepdog" width="300" height="300" />
+
+    <br />
+    <a href="https://google.com" target="_blank">
+        <img src="/files/sheltie.png" title="Sheltie" alt="Sheltie" width="400" height="400" />
+    </a>
+    <br/>
+    <strong>Bold Text</strong>
+    <br />
+    <input type="hidden" value="1" />
+</body>
+</html>
