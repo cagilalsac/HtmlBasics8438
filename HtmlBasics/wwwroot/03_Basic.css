@@ -1,0 +1,74 @@
+﻿body 
+{
+    background-color: gainsboro;
+}
+
+.mylabelclass { /* <label class="mylabelclass">My Second Label</label> */
+    color: green;
+}
+
+/* Flaired edges, by Tomas Theunissen */
+
+hr.style-seven {
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+
+    hr.style-seven:before { /* Not really supposed to work, but does */
+        display: block;
+        content: "";
+        height: 30px;
+        margin-top: -31px;
+        border-style: solid;
+        border-color: black;
+        border-width: 0 0 1px 0;
+        border-radius: 20px;
+    }
+
+    .myinputclass {
+        border-radius: 7px;
+        width: 99%;
+    }
+
+    #mydivid { /* bir html'de id özellikleri tekil olmalıdır. class özelliği ise diğer html elemanlarıyla 
+                    aynı tanımlanabilir. #: id, .: class 
+                   z-index özelliği üst üste gelen html elemanlarından hangisinin daha önde geleceğini belirler, sayısaldır
+               */
+        background-image: url(./files/gta5.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 600px;
+        padding-top: 30px;
+        padding-left: 50px;
+    }
+
+    #mydivid span {
+        /*margin: 50px 0px 0 100px;*/
+        color: rgb(255, 106, 0);
+    }
+
+    .mya:link {
+        text-decoration: none;
+        color: #ff6a00;
+        font-family: 'Comic Sans MS';
+        font-size: 18px;
+    }
+
+.mya:hover {
+    text-decoration: underline !important;
+    color: #0000ff;
+    font-family: 'Comic Sans MS';
+    font-size: 18px;
+    cursor: crosshair;
+}
+
+.mya:visited {
+    text-decoration: underline;
+    color: red;
+    font-family: 'Comic Sans MS';
+    font-size: 18px;
+}
