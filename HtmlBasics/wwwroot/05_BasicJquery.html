@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Basic jQuery</title>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script>
+        //$(document).ready(function () {
+        $(function () {
+            console.log("doc loaded");
+
+            $("button").click(function () {
+                $("p").hide();
+                //$("p").show("slow");
+            });
+
+            $("#myaid").click(function (event) {
+                event.preventDefault();
+                $("#mylabelid").toggle(1000);
+            });
+
+            $("#bSave").click(function () {
+                var adi = $("#tbAdi").val();
+                var soyadiTb = $("#tbSoyadi");
+                var soyadi = soyadiTb.val();
+                var ogrenciNo = $("#tbNo").val();
+                var save = $("#lSaveResult");
+                //if (adi.trim() == "" || soyadi.trim() == "" || ogrenciNo.trim() == "") {
+                //    save.text("Ad, soyad veya no girilmelidir!");
+                //} else {
+
+                //}
+                if (adi.trim() != "" && soyadi.trim() != "" && ogrenciNo.trim() != "") {
+                    var ogrenci = adi;
+                    ogrenci += " " + soyadi;
+                    ogrenci = ogrenci + " (" + ogrenciNo + ")";
+                    save.text(ogrenci + " başarıyla kaydedildi.");
+                    save.css("color", "green").slideUp("slow").slideDown("slow");
+                } else {
+                    save.text("Ad, soyad veya no girilmelidir!");
+                    save.css("color", "red");
+                }
+
+            });
+
+
+            $("#sSehir").text("6"); // ilk değer ataması, Ankara
+            $("#ddlSehir").val("6");
+            $("#ddlSehir").change(function () {
+                //alert($("#ddlSehir").val());
+                if ($("#ddlSehir").val() == "") {
+                    $("#sSehir").html('<span style="color:red;">Sehir Seçiniz...</span>');
+                } else {
+                    $("#sSehir").html("<b>" + $("#ddlSehir").val() + "</b>");
+                }
+            });
+
+            $("#lbOnder").change(function () {
+                var onderler = $("#lbOnder").val();
+                //console.log(onderler.length);
+                if (onderler.length == 0) {
+                    alert('Önder seçiniz');
+                } else {
+                    var sonuc = "";
+                    for (var i = 0; i < onderler.length; i++) {
+                        sonuc += onderler[i] + ", ";
+                        //console.log(onderler[i]);
+                    }
+                    // em, bg, sj, 
+                    sonuc = sonuc.substr(0, sonuc.length - 2);
+                    alert(sonuc);
+                }
+            });
+
+            // <input type="checkbox" checked />
+            $(".cbMutlu").prop("checked", true);
+            $(".pMutlu").text(":)");
+            $(".cbMutlu").change(function () {
+                var checked = $(".cbMutlu").prop("checked");
+                var face = checked ? ":)" : ":(";
+                $(".pMutlu").text(face);
+            });
+
+            $("#lSehir").text("34");
+            $("#rbIstanbul").prop("checked", true);
+            $("input[name=rbSehir]").off("click");
+            $("input[name=rbSehir]").on("click", function () {
+
+            });
+        });
+
+            //function gizle() {
+            //    document.getElementsByTagName("p")[0].style.display = "none";
+            //}
+    </script>
+</head>
+<body>
+    <p>jQuery</p>
+    <button>Hide jQuery 1</button>
+
+    <!--<button onclick="gizle();">Hide jQuery 2</button>-->
+
+    <hr />
+    <label id="mylabelid">Oley, haftasonu!</label>
+    <br />
+    <a id="myaid" href="#">Yukarıyı göster / gizle</a>
+
+    <hr />
+    <table style="border-style: solid;border-width: 1px;">
+        <tr>
+            <td>
+                Öğrenci Adı:
+            </td>
+            <td>
+                <input type="text" id="tbAdi" class="myinputclass" width="250" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Öğrenci Soyadı:
+            </td>
+            <td>
+                <input type="text" id="tbSoyadi" class="myinputclass" width="250" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Öğrenci No:
+            </td>
+            <td>
+                <input type="text" id="tbNo" class="myinputclass" width="250" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" id="bSave" value="Kaydet" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <label id="lSaveResult"></label>
+            </td>
+        </tr>
+    </table>
+    <hr />
+    <select id="ddlSehir">
+        <option value="">-- Seçiniz --</option>
+        <option value="6">Ankara</option>
+        <option value="34">İstanbul</option>
+        <option value="35">İzmir</option>
+    </select>
+    <br />
+    <div id="sSehir"></div>
+    <hr />
+    <select multiple id="lbOnder">
+        <option value="em">Elon Musk</option>
+        <option value="sj">Steve Jobs</option>
+        <option value="bg">Bill Gates</option>
+    </select>
+    <hr />
+    <input type="checkbox" class="cbMutlu" /> Mutlu musun?
+    <br />
+    <p class="pMutlu"></p>
+    <hr />
+    <input type="radio" value="6" name="rbSehir" /> Ankara
+    <input type="radio" value="34" name="rbSehir" id="rbIstanbul" /> İstanbul
+    <br />
+    <label id="lSehir"></label>
+</body>
+</html>
