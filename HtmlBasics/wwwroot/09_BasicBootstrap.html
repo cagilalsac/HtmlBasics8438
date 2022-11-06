@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Basic Bootstrap</title>
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <style>
+        .fb {
+            background-color: #c5dc31 !important;
+            color: #0015ff !important;
+        }
+    </style>
+</head>
+<body>
+    <!--<div class="container">-->
+    <div class="container-fluid">
+        <div class="row">
+            <!--<div class="col-md-4 col-sm-8 col-xs-12">-->
+            <div class="col-4">
+                <b>Adı</b>
+            </div>
+            <div class="col-4">
+                <b>Ünvanı</b>
+            </div>
+            <div class="col-4">
+                <b>Kurumu</b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                Çağıl Alsaç
+            </div>
+            <div class="col-4">
+                .NET Eğitmeni
+            </div>
+            <div class="col-4">
+                Bilge Adam
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <label class="text-success">Successful</label> <!-- yeşil -->
+                <br />
+                <button class="btn btn-primary">Primary</button><!-- koyu mavi -->
+                <br />
+                <a href="https://bilgeadam.com" class="btn btn-info">Info</a><!-- Açık Mavi -->
+                <br />
+                <span class="text-warning">Warning</span> <!-- sarı -->
+                <br />
+                <input type="button" class="btn btn-danger" value="Danger" /><!-- kırmızı -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="">
+                    <div class="mb-3 mt-3">
+                        <label for="tbKullaniciAdi" class="form-label">Kullanıcı Adı:</label>
+                        <input type="text" class="form-control" id="tbKullaniciAdi" placeholder="Kullanıcı adı giriniz" name="kullaniciAdi">
+                    </div>
+                    <div class="mb-3">
+                        <label for="tbSifre" class="form-label">Şifre:</label>
+                        <input type="password" class="form-control" id="tbSifre" placeholder="Şifre giriniz" name="sifre">
+                    </div>
+                    <div class="form-check mb-3">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="beniHatirla"> Unutma Beni
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-outline-secondary">Kaydet</button>
+                    &nbsp;&nbsp;&nbsp;
+                    <button type="reset" class="btn btn-dark">Temizle</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="mt-4 p-5 bg-primary text-white fb">
+                    <h1>Bilge Adam</h1>
+                    <p>Çare Bilge Adam</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

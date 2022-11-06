@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script>
+        var sayilar = [];
+        //var sayilar = new Array();
+        sayilar[0] = 1;
+        sayilar[1] = 3;
+        sayilar[2] = 5;
+        for (const sayi of sayilar) {
+            console.log(sayi);
+        }
+    </script>
+
+    <script>
+        class Ogrenci {
+            constructor(no, adi, soyadi, dogumTarihi) {
+                this.no = no;
+                this.adi = adi;
+                this.soyadi = soyadi;
+                this.dogumTarihi = dogumTarihi;
+            }
+
+            getir() {
+                return '<b><i>No:</i></b> ' + this.no + '<br />' +
+                    '<b><i>Tam Adı:</i></b> ' + this.adi + ' ' + this.soyadi + '<br />' +
+                    '<b><i>Doğum Tarihi</i></b>: ' + this.dogumTarihi.toLocaleString('tr-TR'); // en-US
+            }
+        }
+
+        //$(document).ready(function () {
+        $(function () { 
+            let ogrenci = new Ogrenci(1, "Zahide", "Uzun", new Date("2022-11-06T10:27:05"));
+            console.log(ogrenci.no);
+            var ogrenciStr = ogrenci.getir();
+
+            // Javascript yöntemi
+            //var pElement = document.getElementById("pOgrenci");
+            //pElement.innerHTML = ogrenciStr;
+            // jQuery yöntemi
+            $("#pOgrenci").html(ogrenciStr);
+            
+        });
+    </script>
+</head>
+<body>
+    <p id="pOgrenci">
+
+    </p>
+</body>
+</html>

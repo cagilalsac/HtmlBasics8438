@@ -85,7 +85,8 @@
             $("#rbIstanbul").prop("checked", true);
             $("input[name=rbSehir]").off("click");
             $("input[name=rbSehir]").on("click", function () {
-
+                var seciliRadio = $("input[name=rbSehir]:checked").val();
+                $("#lSehir").text(seciliRadio);
             });
         });
 
